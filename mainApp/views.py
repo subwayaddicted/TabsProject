@@ -8,4 +8,18 @@ def main_page(request):
 
 def view_page(request):
     artists = Artist.objects.filter(id__gt=0)
-    return render(request, 'mainApp/view_page.html', {'artists':artists})
+    return render(request, 'mainApp/view_page2.html', {'artists':artists})
+
+def albums_page(request):
+    albums = Album.objects.filter()
+    return render(request, 'mainApp/albums_page.html', {'albums': albums})
+
+def songs_page(request):
+    songs = Song.objects.filter()
+    return render(request, 'mainApp/songs_page.html', {'songs': songs})
+
+def about_page(request):
+    return render(request, 'mainApp/about_page.html', {})
+
+def contact_page(request):
+    return render(request, 'mainApp/contact_page.html', {})

@@ -9,20 +9,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ez Tabs</title>
+    <title>Contacts</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static "css/full.css" %}" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+    </style>
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="{% url "main_page" %}">Ez Tabs</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,25 +48,24 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url "about_page" %}">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url "contact_page" %}">Contact</a>
-            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Page Content -->
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="mt-5" style="color: white">Ez Tabs</h1>
-            <p style="color: white">This is webpage to search and open tabs ez and comfortable</p>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Contacts</h1>
+          <p class="lead">If you have some advices or proposals just send me e-mail</p>
+          <ul class="list-unstyled">
+            <li>E-mail : novitsky.vladislav00@gmail.com</li>
+            <li></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
