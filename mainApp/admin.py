@@ -5,7 +5,6 @@ from .models import Artist, Album, Song
 
 class SongInLine(admin.TabularInline):
     model = Song
-    extra = 5
 
 class AlbumsInLine(admin.TabularInline):
     model = Album
@@ -15,6 +14,7 @@ class ArtistAdmin(admin.ModelAdmin):
     search_fields = ['artist_name']
     fieldsets = [
         ('Artist name',     {'fields':['artist_name']}),
+        ('Artist info',     {'fields':['info']}),
     ]
     inlines = [AlbumsInLine]
 
@@ -23,6 +23,7 @@ class AlbumAdmin(admin.ModelAdmin):
     search_fields = ['album_name']
     fieldsets = [
         ('Album name',      {'fields':['album_name']}),
+        ('Album info', {'fields': ['album_info']}),
     ]
     inlines = [SongInLine]
 
