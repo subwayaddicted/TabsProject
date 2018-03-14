@@ -15,7 +15,7 @@
     <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static "css/2-col-portfolio.css" %}" rel="stylesheet">
+    <link href="{% static "css/songs.css" %}" rel="stylesheet">
 
   </head>
 
@@ -44,13 +44,17 @@
       </div>
     </nav>
 
+    <br>
+    <br>
+    <br>
 
     <!-- Page Content -->
     <div class="container">
-
-
-
-
+        {% for song in songs %}
+        <ul class="list-group">
+            <a href="{{ song.link }}" class="list-group-item list-group-item-action">{{ song.song_name }}</a>
+        </ul>
+        {% endfor %}
     </div>
       <!-- /.container -->
 

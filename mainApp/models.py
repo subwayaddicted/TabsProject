@@ -21,7 +21,6 @@ class Song(models.Model):
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     number = models.IntegerField(default=0)
     song_name = models.CharField(max_length=100)
-    duration = models.IntegerField(default=0)
     link = models.CharField(max_length=300)
 
     def __str__(self):

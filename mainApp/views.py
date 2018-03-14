@@ -15,15 +15,13 @@ def view_page(request):
 
 
 def albums_page(request, pk):
-    artist = get_object_or_404(Artist, pk=pk)
     albums = Album.objects.filter(artist_id=pk)
-    return render(request, 'mainApp/albums_page.html', {'albums': albums}, {'artist' : artist})
+    return render(request, 'mainApp/albums_page.html', {'albums': albums})
 
 
 def songs_page(request, pk):
-    album_id = get_object_or_404(Album, pk=pk)
     songs = Song.objects.filter(album_id=pk)
-    return render(request, 'mainApp/songs_page.html', {'songs': songs}, {'album':album_id})
+    return render(request, 'mainApp/songs_page.html', {'songs': songs})
 
 
 def about_page(request):
