@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="{% url "main_page" %}">Ez Tabs</a>
+          <a class="navbar-brand" href="{% url "main_page" %}"><strong>Ez Tabs</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,14 +48,13 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">TEST
-      </h1>
+        <h1 class="my-4"><strong>{{ albums.last }}</strong></h1>
 
       <div class="row">
           {% for album in albums %}
           <div class="col-lg-6 portfolio-item">
           <div class="card h-100">
-            <a href="{% url "songs_page"  pk=album.pk %}"><img class="card-img-top" src= "../../static/img/avatars/{{ album.id }}.jpg" alt="???"></a>
+            <a href="{% url "songs_page"  pk=album.pk %}"><img class="card-img-top" src= "../../static/img/alb/{{ album.pk }}.jpg" alt="ALBUM_IMG"></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="{% url "songs_page" pk=album.pk %}">{{ album.album_name }}</a>
@@ -64,6 +63,12 @@
             </div>
           </div>
           </div>
+          {% empty %}
+            <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Oops, there's nothing there for now</h1>
+          <p class="lead">Seems it's still empty as you see</p>
+          </ul>
+        </div>
           {% endfor %}
       </div>
       <!-- /.row -->
