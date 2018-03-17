@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from pprint import pprint
+from django.shortcuts import render
+
 from .models import Artist, Album, Song
 
 # Create your views here.

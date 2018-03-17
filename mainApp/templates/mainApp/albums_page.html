@@ -54,7 +54,9 @@
           {% for album in albums %}
           <div class="col-lg-6 portfolio-item">
           <div class="card h-100">
-            <a href="{% url "songs_page"  pk=album.pk %}"><img class="card-img-top" src= "../../static/img/alb/{{ album.pk }}.jpg" alt="ALBUM_IMG"></a>
+            <a href="{% url "songs_page"  pk=album.pk %}">
+                <img class="card-img-top" src= "{% static "img/alb/" %}{{ album.pk }}.jpg" alt="ALBUM_IMG">
+            </a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="{% url "songs_page" pk=album.pk %}">{{ album.album_name }}</a>
