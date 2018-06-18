@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+
 {% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -38,6 +39,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url "contact_page" %}">Contact</a>
             </li>
+              <li class="nav-item">
+              <a class="nav-link" href="{% url "main_page" %}">SMTHNG</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -45,25 +49,11 @@
 
     <!-- Page Content -->
     <div class="container">
-
-      <!-- Introduction Row -->
-      <br>
         <br>
-        <h1 class="my-4">About Us
-        <small>It's Nice to Meet You!</small>
-      </h1>
-      <p>Well it's my first website all-by-myself made and actually made just for me, but it's something as for beginner</p>
-
-      <!-- Team Members Row -->
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
-          <h3>Vlad Novitsky
-            <small>No job</small>
-          </h3>
-          <p>Done all that.</p>
-        </div>
-      </div>
+        <br>
+        <br>
+        {% block content %}
+        {% endblock %}
 
     </div>
     <!-- /.container -->
