@@ -3849,6 +3849,11 @@ tbody.collapse.show {
   list-style: none;
 }
 
+.nav-button {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;

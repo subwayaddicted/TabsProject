@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 from .models import Artist, Album, Song
 
@@ -30,3 +31,11 @@ def about_page(request):
 
 def contact_page(request):
     return render(request, 'mainApp/contact_page.html', {})
+
+@login_required(login_url="/accounts/log_in/")
+def personal_area_page(request):
+    return render(request, 'mainApp/personal_area_page.html', {})
+
+@login_required(login_url="/accounts/log_in/" )
+def new_artist_page(request):
+    return render(request, 'mainApp/new_artist_page.html', {})
